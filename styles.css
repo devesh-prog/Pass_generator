@@ -1,0 +1,213 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+ /* creating some global variable */
+ :root{ 
+
+    --dk-violet: hsl(268, 75%, 9%);
+    --lt-violet: hsl(268,47%, 21%);
+ }  
+
+body{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+
+}
+
+.wrapper{
+    width: 90%;
+    max-width: 450px;
+}
+
+h1{
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.2;
+    letter-spacing: 2px;
+}
+
+.display_container{
+    position: relative;
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+    border-radius: 1rem;
+    margin: 1rem 0;
+    padding-top: 0.3rem;
+    border-bottom: 4px solid hsl(287, 72%, 41%);
+}
+
+.display{
+    width: 100%;
+    background-color: transparent;
+    border-style: none;
+    padding: 1rem 1rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: #3a3d8c;
+    font-size: 1.5rem;
+    line-height: 30px;
+    padding-right: 3.5rem;
+}
+
+.display::placeholder{
+    position: absolute;
+    top: 50%;
+    left: 1.5rem;
+    color: #3a3d8c;
+    opacity: 0.65;
+    text-transform: uppercase;
+    line-height: 30px;
+    transform: translateY(-50%);
+}
+
+.display_container button{
+    position: absolute;
+    top: 63%;
+    right: 1.5rem;
+    transform: translateY(-50%);
+    background-color: transparent;
+    scale: 2;
+    border: none;
+    cursor: pointer;
+    opacity: 0.50;
+}
+
+
+
+.inputContainer{
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+    border-radius: 1rem;
+    padding: 2rem;
+    border-bottom: 4px solid hsl(287, 72%, 41%);
+}
+
+.lengthContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lengthContainer p:nth-child(1){
+    color: white;
+    font-size: 1.5rem;
+}
+
+.lengthContainer p:nth-child(2){
+
+    color: hsl(287, 72%, 41%);
+    font-size: 1.5rem;
+}
+
+.strength-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.75rem;
+    margin-bottom: 2rem;
+}
+
+.strength-container p:nth-child(1){
+    color: white;
+    font-size: 1.5rem;
+}
+
+.strength-container div{
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+}
+
+#generatebtn{
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    background-color: #3a3d8c;
+    padding: 1rem 0;
+    font-weight: 600;
+    border-radius: 0.75rem;
+    border-style: none;
+    border-bottom: 0.35rem solid yellow;
+    color: #d5d5d5;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.checkbox{
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    gap: 0 1rem;
+}
+
+.checkbox input{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid hsl(287, 72%, 41%);
+    cursor:pointer;
+    position: relative;
+    border-radius: 0.35rem;
+}
+
+.checkbox input:checked{
+    background-color: hsl(287, 72%, 41%);
+}
+
+.checkbox input:checked::before{
+    content: '✓';
+    position: absolute;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #d5d5d5;
+    left: 20%;
+    top: -20%;
+}
+
+.slider{
+    appearance: none;
+    width: 100%;
+    height: 0.75rem;
+    cursor: pointer;
+    background-color: #3a3d8c;
+    border-radius: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    background-image: linear-gradient( 135deg, #3B2667 10%, #BC78EC 100%);
+    background-repeat: no-repeat;
+}
+
+.slider::-webkit-slider-thumb{
+    position: relative;
+    appearance: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: yellow;
+    box-shadow: 0px 0px 20px 0px rgba(255, 229, 61, 0.50);
+    transition: all 100ms ease-in;
+}
+
+.slider:focus{
+    outline: 3px solid white;
+}
+
+.slider::-webkit-slider-thumb:hover{
+    background-color: black;
+    outline: 2px solid yellow;
+    box-shadow: 0px 0px 25px 5px yellowgreen ;
+}
